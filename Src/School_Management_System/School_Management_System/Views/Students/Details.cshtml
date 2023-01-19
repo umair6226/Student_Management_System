@@ -1,0 +1,98 @@
+﻿@model School_Management_System.Models.tbl_Students
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tbl_Students</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Registration_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Registration_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Roll_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Roll_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Student_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Father_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Father_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Student_Contact)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student_Contact)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Father_Contact)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Father_Contact)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Class_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Class_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StudentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

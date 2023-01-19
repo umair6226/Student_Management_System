@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Student_Management_SystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbl_Students">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Registration_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Roll_No" Type="Int32" />
+    <Property Name="Student_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Father_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Student_Contact" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Father_Contact" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Class_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Age" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Contact" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="StudentDatabase" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_Students" EntityType="Self.tbl_Students" />
+    <EntitySet Name="tbl_Users" EntityType="Self.tbl_Users" />
+  </EntityContainer>
+</Schema>
